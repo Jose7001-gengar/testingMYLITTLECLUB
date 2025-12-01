@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\GENGA\\Documents\\GitHub\\TestProject\\TestProject.csproj": {}
+    "C:\\Users\\GENGA\\Documents\\GitHub\\pruebas MY little club\\test\\TestProject\\TestProject.csproj": {}
   },
   "projects": {
     "C:\\Users\\GENGA\\Documents\\GitHub\\My-Little-Club\\My little Club.csproj": {
@@ -97,14 +97,14 @@
         }
       }
     },
-    "C:\\Users\\GENGA\\Documents\\GitHub\\TestProject\\TestProject.csproj": {
+    "C:\\Users\\GENGA\\Documents\\GitHub\\pruebas MY little club\\test\\TestProject\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\GENGA\\Documents\\GitHub\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\Users\\GENGA\\Documents\\GitHub\\pruebas MY little club\\test\\TestProject\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\Users\\GENGA\\Documents\\GitHub\\TestProject\\TestProject.csproj",
+        "projectPath": "C:\\Users\\GENGA\\Documents\\GitHub\\pruebas MY little club\\test\\TestProject\\TestProject.csproj",
         "packagesPath": "C:\\Users\\GENGA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\GENGA\\Documents\\GitHub\\TestProject\\obj\\",
+        "outputPath": "C:\\Users\\GENGA\\Documents\\GitHub\\pruebas MY little club\\test\\TestProject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

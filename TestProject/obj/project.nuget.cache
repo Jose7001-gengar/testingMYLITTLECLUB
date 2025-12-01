@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6l20Uryt/eo=",
+  "dgSpecHash": "viLQ5g8SvpQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\GENGA\\Documents\\GitHub\\TestProject\\TestProject.csproj",
+  "projectFilePath": "C:\\Users\\GENGA\\Documents\\GitHub\\pruebas MY little club\\test\\TestProject\\TestProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\GENGA\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\GENGA\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

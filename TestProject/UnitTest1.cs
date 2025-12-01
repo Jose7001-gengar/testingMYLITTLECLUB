@@ -6,8 +6,7 @@ using Xunit;
 using My_little_Club.Models;
 using My_little_Club;
 using My_little_Club.Controllers;
-using System.Diagnostics;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 namespace TestProject
 {
     public class UnitTest1
