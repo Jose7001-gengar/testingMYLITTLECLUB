@@ -19,8 +19,8 @@ namespace TestProject
 
             // ====== Arrange ======
             var contextOptions = new DbContextOptionsBuilder<contextDATA>()
-            .UseSqlServer(@"Data Source=localhost;Database=MYLITCLUB;Integrated 
-            Security=True;MultipleActiveResultSets=true;Encrypt=False;TrustServerCertificate=True;")
+            .UseSqlServer(@"Data Source=localhost;Database=MYLITCLUB;Integrated Security=True;
+            MultipleActiveResultSets=true;Encrypt=False;TrustServerCertificate=True;")
             .Options;
 
             using var context = new contextDATA(contextOptions);
@@ -30,11 +30,11 @@ namespace TestProject
             // Crea el objeto ESTUDIANTES con datos de prueba para la base de datos
             var estudiante = new ESTUDIANTES
             {
-
+                //cambiar estos datos para realizar la prueba
                 rol = 2,
-                cedula = 123,
-                contrasena = "abc123",
-                nombre = "Carlos",
+                cedula = 171725,
+                contrasena = "abc12342",
+                nombre = "Carlos Mario",
                 apellido = "Lopez",
                 id_clase_asignada = 3
             };
@@ -42,12 +42,12 @@ namespace TestProject
             context.ESTUDIANTES.Add(estudiante);
             context.SaveChanges();
 
-            /// ====== Act ======
-            var resultado = await context.ESTUDIANTES.Where(e => e.cedula == 123).FirstOrDefaultAsync();
+            /// ====== Act ======                                            cambiar aqui la cedula para realizar la prueba
+            var resultado = await context.ESTUDIANTES.Where(e => e.cedula == 171725).FirstOrDefaultAsync();
 
             //assert
             Assert.NotNull(resultado);
-            Assert.Equal("Carlos", resultado.nombre);
+            Assert.Equal("Carlos Mario", resultado.nombre);
             Assert.Equal("Lopez", resultado.apellido);
 
         }
@@ -66,6 +66,8 @@ namespace TestProject
             using var context = new contextDATA(contextOptions);
             //instancia del controlador
             var controller = new HomeController(context);
+
+
             int cedula = 456;
             string contrasena = "pass456";
             // ====== Act ======
@@ -76,9 +78,10 @@ namespace TestProject
 
             // ====== Assert ======
             var view = Assert.IsType<ViewResult>(result);
+            Assert.NotNull(result);
             Assert.Equal("dashboard_estudiante", view.ViewName);
 
-            Assert.NotNull(result);
+            
 
         }
 
@@ -102,7 +105,8 @@ namespace TestProject
             string contrasena = "noexisto";
             // ====== Act ======
             var result = await controller.dashboard_estudiante(cedula, contrasena) as ViewResult;
-
+            // ====== Assert ======
+            // Verifica que la vista devuelta NO sea "dashboard_estudiante" es decir, que no se haya podido iniciar sesion
             Assert.Equal("dashboard_estudiante", result.ViewName);
         }
 
@@ -126,14 +130,14 @@ namespace TestProject
             //instancia del controlador
             var controller = new entryPoint(context);
 
-
-
-            string nombre = "Ana";
+            int rol = 2;
+            //CAMBIAR ESTOS DATOS PARA REALIZAR LA PRUEBA 
+                string nombre = "Maria";
                 string apellido = "Gomez";
-                int rol = 2;
-                int cedula = 456;
+                
+                int cedula = 4567;
                 string contrasena = "pass456";
-               int id_clase_asignada = 3;
+                int id_clase_asignada = 3;
                 
             
             // ====== Act ======
@@ -147,7 +151,7 @@ namespace TestProject
             string resultado_busqueda = result.ActionName;
 
             // ====== Assert ======
-
+            // Verifica que la acción redirige correctamente a "register"
             Assert.Equal("register", resultado_busqueda);
 
         }
